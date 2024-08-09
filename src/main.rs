@@ -2,6 +2,7 @@ use exif::{DateTime, Tag, Value};
 use std::fs;
 
 fn main() {
+    fs::create_dir("./output");
     let contents = fs::read_dir("./pictures").unwrap();
     for entry in contents {
         let path = entry.unwrap().path();
